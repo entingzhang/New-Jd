@@ -160,7 +160,9 @@
 		border: 1px solid #E2231A;
 		border-radius: 0px;
 	}
-	
+	.el-submenu__title{
+		color:#E2231A ;
+	}
 	button {
 		background-color: #E2231A;
 		border: 1px solid #E2231A;

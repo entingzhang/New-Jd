@@ -1,22 +1,29 @@
 <template>
+	<!--首页上面的搜索狂的组件-->
 	<div class="search-bar weui-flex" :class="{fixed:fixed}">
 		<div class="category">
 			<span class="fa fa-th-list"></span>
 		</div>
 		<div class="search weui-flex__item">
-			<input type="search" placeholder="请输入商品名称" />
+			<input type="search" placeholder="请输入商品名称"  @focus="show=true"/>
 		</div>
 		<div class="user">
 			<span class="fa fa-user"></span>
 		</div>
+		<search-page v-model="show"></search-page>
 	</div>
 </template>
 <script>
+	import SearchPage from '@/components/SearchPage.vue'
 	export default {
-		data:function(){
+		data(){
 			return{
-				fixed:false
+				fixed:false,
+				show:false
 			};
+		},
+		components:{
+			SearchPage
 		},
 		methods:{},
 		mounted:function(){

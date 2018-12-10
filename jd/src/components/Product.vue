@@ -1,4 +1,5 @@
 <template>
+	<!--这个是快速导航下面的商品内容-->
 	<div class="product-list clear">
 		<div class="product" v-for="(item,index) in products">
 			<a href="#">

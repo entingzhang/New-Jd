@@ -1,13 +1,9 @@
 <template>
 	<div class="home">
-		<div>
-			<h3>首页</h3>
-			<ul>
-				<li v-for="(item,index) in product" v-text="item.title" :key="index"></li>
-			</ul>
-		</div>
 		<search-bar></search-bar>
 		<swiper-bar></swiper-bar>
+		<quick-nav></quick-nav>
+		<product></product>
 		<dibu></dibu>
 	</div>
 </template>
@@ -17,6 +13,8 @@
 	import Dibu from "@/components/Footer.vue";
 	import SearchBar from "@/components/Search.vue";
 	import SwiperBar from "@/components/Swiper.vue";
+	import QuickNav from "@/components/QuickNav.vue";
+	import Product from "@/components/Product.vue";
 	import axios from "axios";
 	export default {
 		data(){
@@ -26,15 +24,13 @@
 		},
 		name: 'home',
 		components: {
-			Dibu,
 			SearchBar,
-			SwiperBar
+			SwiperBar,
+			QuickNav,
+			Product,
+			Dibu
 		},
-		mounted(){
-			axios.get("/data.json").then(res=>{
-				console.log();
-			}).catch(err=>{});
-		}
+		
 	}
 </script>
 <style scoped>

@@ -32,6 +32,7 @@
 	.allbig {
 		height: 100%;
 		width: 100%;
+
 	}
 	
 	.allbig header {
@@ -54,6 +55,8 @@
 		top: 128px;
 		left: 0px;
 		box-sizing: border-box;
+		overflow-y: auto;
+		
 	}
 	
 	.allbig .content {
@@ -80,6 +83,8 @@
 		right: 70px;
 		top: 330px;
 		height: 300px;
+		overflow-y: auto;
+		
 	}
 	
 	.content .contmain {

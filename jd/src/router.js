@@ -18,8 +18,7 @@ import AllHeader from './components/AllHeader.vue'
 import ConentTop from './components/ConentTop.vue'
 import ConentRight from './components/ConentRight.vue'
 import ConentMain from './components/ConentMain.vue'
-
-
+//12月10号添加的uve组件
 
 Vue.use(Router)
 const router= new Router({
@@ -70,15 +69,15 @@ const router= new Router({
       }]
     }]
 });
-router.beforeEach((to,from,next) =>{
-	console.log(to);
-	console.log(from);
-	console.log(to.path);
-	if(to.path=='/search'){
-		next({path:'/'});
-	}else{
-		next();
-	}
-})
+//router.beforeEach((to,from,next) =>{
+//	console.log(to);
+//	console.log(from);
+//	console.log(to.path);
+//	if(to.path=='/search'){
+//		next({path:'/'});
+//	}else{
+//		next();
+//	}
+//})
 export default router;
 	
