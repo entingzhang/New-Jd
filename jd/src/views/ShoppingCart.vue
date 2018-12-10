@@ -10,7 +10,9 @@
 					<router-link :to="'/product/'+item.id"><img :src="item.image"></router-link>
 				</div>
 				<div class="product-content weui-flex__item">
-					<router-link :to="'/product/'+item.id"><div class="title" v-text="item.title"></div></router-link>
+					<router-link :to="'/product/'+item.id">
+						<div class="title" v-text="item.title"></div>
+					</router-link>
 					<div class="product-line weui-flex">
 						<div class="price weui-flex__item">￥:<span v-text="item.price"></span></div>
 						<div class="num">
@@ -41,7 +43,7 @@
 	import Dibu from "@/components/Footer.vue";
 	import TopBar from "@/components/TopBar.vue";
 	export default {
-//		name:'cart',
+		//		name:'cart',
 		data: function() {
 			return {
 				products: [{
@@ -121,32 +123,30 @@
 				}
 			}
 		},
-			computed: {
-				total() {
-					let n = 0;
-					for(let i = 0; i < this.selects.length; i++) {
-						n=n+this.selects[i].count;
-					}
-					return n;
-				},
-				sum() {
-					let n = 0;
-					for(let i = 0; i < this.selects.length; i++) {
-						n += this.selects[i].count * this.selects[i].price;
-					}
-					return n;
+		computed: {
+			total() {
+				let n = 0;
+				for(let i = 0; i < this.selects.length; i++) {
+					n = n + this.selects[i].count;
 				}
+				return n;
 			},
-			components: {
-				Dibu,
-				TopBar
+			sum() {
+				let n = 0;
+				for(let i = 0; i < this.selects.length; i++) {
+					n += this.selects[i].count * this.selects[i].price;
+				}
+				return n;
 			}
+		},
+		components: {
+			Dibu,
+			TopBar
 		}
+	}
 </script>
 
 <style>
-	.shopping-list {}
-	
 	.shopping-list .item {
 		position: relative;
 		min-height: 75px;

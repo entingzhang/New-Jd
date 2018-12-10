@@ -21,7 +21,7 @@
 				<el-row>
 					<el-col :span="8" v-for="(o, index) in 2" :key="o" :offset="index > 0 ? 2 : 0">
 						<el-card :body-style="{ padding: '0px' }">
-							<img src="../../public/images/productimage_01.jpg" class="images"/>
+							<img src="../../public/images/phone.jpg" class="images"/>
 							<div style="padding: 14px;">
 								<span>好吃的汉堡</span>
 								<div class="bottom clearfix">

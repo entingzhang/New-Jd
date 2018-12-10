@@ -1,7 +1,7 @@
 <template>
 	<div>
-		<input type="text" v-model="keywords" @change="search" />
-		<search-page></search-page>
+		<!--<input type="text" v-model="keywords" @change="search" />-->
+		<search-bar v-model="keywords" @change="search"></search-bar>
 		<div class="product" v-for="(item,index) in products">
 			<a href="#">
 				<div class="product-image">
@@ -16,20 +16,22 @@
 				</div>
 			</a>
 		</div>
+		<search-products></search-products>
 		<dibu></dibu>
 	</div>
 </template>
 
 <script>
-	import axios from "axios";
-	import Dibu from "@/components/Footer.vue";
-	import SearchPage from "@/components/SearchPage.vue";
+	import axios from 'axios';
+	import Dibu from '@/components/Footer.vue';
+	import SearchBar from '@/components/Search.vue';
+	import SearchProducts from '@/components/SearchProducts.vue';
 	export default {
 		data() {
 			return {
-				keyword: '',
+				keywords: '',
 				products: []
-			};
+			}
 		},
 		methods: {
 			search() {
@@ -39,7 +41,8 @@
 			}
 		},
 		components: {
-			SearchPage,
+			SearchBar,
+			SearchProducts,
 			Dibu
 		}
 	}

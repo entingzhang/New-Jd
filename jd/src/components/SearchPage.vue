@@ -2,7 +2,7 @@
 	<div class="search-page" v-show="show">
 		<header class="weui-flex">
 			<div class="go-back">
-				<a href="#" @click.prevent="hide"><i class="fa fa-angle-left"></i></a>
+				<a href="#" @click.prevent="hide"><i class="fa fa-arrow-left"></i></a>
 			</div>
 			<div class="search weui-flex-item">
 				<input type="search" placeholder="请输入关键字..." />
@@ -19,7 +19,7 @@
 		data() {
 			return {
 				show: false
-			};
+			}
 		},
 		props: ['value'],
 		created() {
@@ -59,16 +59,14 @@
 		z-index: 99999;
 		background-color: #ffffff;
 	}
-	
-	.search-page header .search {
-		padding-top: 7px;
+	.search-page header{
+		background-color: pink;
 	}
-	
 	.search-page header input {
 		width: 100%;
 		height: 30px;
 		border-radius: 15px;
-		border: solid 1px #CCCCCC;
+		/*border: solid 1px #CCCCCC;*/
 		outline: none;
 		padding-left: 40px;
 		background-color: #fff;
@@ -89,5 +87,20 @@
 		font-size: 14px;
 		line-height: 44px;
 		text-decoration: none;
+	}
+	.search-page .go-back,
+	.search-page .search-button{
+		width: 50px;
+		height: 44px;
+		font-size: 20px;
+		line-height: 44px;
+		text-align: center;
+	}
+	.search-page .go-back i{
+		color: #E93B3D;
+	}
+	.search-page .search{
+		padding-top: 7px;
+		width: 100%;
 	}
 </style>

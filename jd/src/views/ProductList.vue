@@ -9,21 +9,18 @@
 		<a href="#">评价</a>
 		<a href="#">推荐</a>
 		</top-bar>
-		<goods></goods>
 		<comment></comment>
 	</div>
 </template>
 
 <script>
 	import TopBar from "@/components/TopBar.vue";
-	import Goods from "@/components/Goods.vue";
 	import Comment from "@/components/Comment.vue";
 	
 	export default{
 		name:'product',
 		components:{
 			TopBar,
-			Goods,
 			Comment
 		}
 //		data(){

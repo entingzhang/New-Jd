@@ -58,7 +58,7 @@
 		text-decoration: none;
 	}
 	footer a.router-link-exact-active{
-		color: deeppink;
+		color: #E93B3D;
 	}
 	footer ul {
 		margin: 0;

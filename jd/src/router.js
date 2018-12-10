@@ -6,12 +6,11 @@ import User from './views/UserCenter.vue'
 import Search from './views/Search.vue'
 import Listli from './views/Listli.vue'
 import Product from './views/ProductList.vue'
-import Goods from './components/Goods.vue'
+import Routerdemo from './views/Router.vue'
+import AllBig from './views/AllBig.vue'
 import Detail from './components/Detail.vue'
 import Comment from './components/Comment.vue'
 import Recommend from './components/Recommend.vue'
-import Routerdemo from './views/Router.vue'
-import AllBig from './views/AllBig.vue'
 import AllAside from './components/AllAside.vue'
 //import AllConent from './components/AllConent.vue'
 import AllHeader from './components/AllHeader.vue'
@@ -19,7 +18,7 @@ import ConentTop from './components/ConentTop.vue'
 import ConentRight from './components/ConentRight.vue'
 import ConentMain from './components/ConentMain.vue'
 //12月10号添加的uve组件
-
+//import SearchProducts from "@/SearchProducts.vue";
 Vue.use(Router)
 const router= new Router({
   mode: 'history',

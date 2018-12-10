@@ -54,7 +54,7 @@
 	width: 50px;
 	height: 44px;
 	font-size: 20px;
-	color: #fff;
+	color: #E93B3D;
 	line-height: 44px;
 	text-align: center;
 }
@@ -71,6 +71,6 @@
 	box-sizing: border-box;
 }
 .search-bar.fixed{
-	background-color: deeppink;
+	background-color: #E93B3D;
 }
 </style>
