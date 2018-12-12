@@ -10,7 +10,7 @@
 		<div class="user">
 			<span class="fa fa-user"></span>
 		</div>
-		<search-page v-model="show"></search-page>
+		<search-page v-model="show" @search="search"></search-page>
 	</div>
 </template>
 <script>
@@ -25,8 +25,13 @@
 		components:{
 			SearchPage
 		},
-		methods:{},
-		mounted:function(){
+		methods:{
+			search(val){
+				console.log(val);
+				this.$router.push({name:'search',params:{product:val}});
+			}
+		},
+		mounted(){
 			var self=this;
 			window.addEventListener("scroll",function(){
 				var scrollTop=document.body.scrollTop||window.pageYOffset||document.documentElement.scrollTop;

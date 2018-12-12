@@ -1,7 +1,9 @@
 <template>
 	<div>
-		<!--<input type="text" v-model="keywords" @change="search" />-->
-		<search-bar v-model="keywords" @change="search"></search-bar>
+		<input type="text" v-model="keyword" @focus="show=true" />
+		<search-button v-model="show"></search-button>
+		<search-products v-for="(item,index) in products" :id="item.id" :title="item.title" :price="item.price" :image="item.image" :key="index"></search-products>
+		<!--<search-bar v-model="keywords" @change="search"></search-bar>
 		<div class="product" v-for="(item,index) in products">
 			<a href="#">
 				<div class="product-image">
@@ -15,35 +17,44 @@
 				<div class="similar-info">
 				</div>
 			</a>
-		</div>
-		<search-products></search-products>
+		</div>-->
+		<search-page v-model="show" @search="search"></search-page>
 		<dibu></dibu>
 	</div>
 </template>
 
 <script>
 	import axios from 'axios';
+	import qs from "qs";
 	import Dibu from '@/components/Footer.vue';
 	import SearchBar from '@/components/Search.vue';
 	import SearchProducts from '@/components/SearchProducts.vue';
+	import SearchButton from '@/components/SearchButton.vue';
+	import SearchPage from '@/components/SearchPage.vue';
 	export default {
 		data() {
 			return {
-				keywords: '',
-				products: []
+				keyword: '',
+				products: [],
+				show: false,
+				fixed: false
 			}
 		},
 		methods: {
-			search() {
-				axios.get(this.serveRoot + "/index.php/api/index/searchProduct?keyword=" + this.keyword).then(res => {
-					this.products = res.data;
-				}).catch(err => {});
+			search(val){
+				this.products=val;
 			}
 		},
 		components: {
 			SearchBar,
 			SearchProducts,
+			SearchButton,
+			SearchPage,
 			Dibu
+		},
+		created(){
+			if(this.route.params.product!=null)
+			this.products=this.route.params.product;
 		}
 	}
 </script>
