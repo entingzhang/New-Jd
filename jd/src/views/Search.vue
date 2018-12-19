@@ -59,12 +59,15 @@
 	}
 </script>
 
-<style scoped="scoped">
+<style>
 	img {
 		border: 0 none;
 		vertical-align: top;
 	}
-	
+	.search-page header input{
+		border:0px;
+		/*border:1px solid #CCCCCC;*/
+	}
 	.left {
 		float: left;
 	}

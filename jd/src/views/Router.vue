@@ -1,6 +1,6 @@
 <template>
 	<div>
-		
+		<!--这个页面暂时还 没什么作用-->
 	<button @click="$router.push('/')">首页</button>
 	<button @click="$router.push('/listli')">分类</button>
 	<!--<button @click="$router.push({name:'searcch',params:{userId123},query:{plan:'private'}})">搜索name</button>
