@@ -21,57 +21,56 @@ import ConentMain from './components/ConentMain.vue'
 //12月10号添加的uve组件
 //import SearchProducts from "@/SearchProducts.vue";
 Vue.use(Router)
-const router= new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Home
-    },{
-      path: '/cart',
-      name: 'cart',
-      component: Cart
-    },{
-      path: '/user',
-      name: 'user',
-      component: User
-    },{
-      path: '/search',
-      name: 'search',
-      component: Search
-    },{
-      path: '/listli',
-      name: 'listli',
-      component: Listli
-    },{
-      path: '/product',
-      name: 'product',
-      component: Product
-    },{
-      path: '/router',
-      name: 'router',
-      component: Routerdemo
-    },{
-      path: '/logo',
-      name: 'logo',
-      component: Logo
-    },{
-      path: '/allbig',
-      name: 'allbig',
-      component: AllBig,
-      children:[{
-      	path:'',
-      	components:{
-      		default:ConentMain,
-      		header:AllHeader,
-      		aside:AllAside,
-      		conenttop:ConentTop,
-      		conentright:ConentRight,
-      	}
-      }]
-    }]
+const router = new Router({
+	mode: 'history',
+	base: process.env.BASE_URL,
+	routes: [{
+		path: '/',
+		name: 'home',
+		component: Home
+	}, {
+		path: '/cart',
+		name: 'cart',
+		component: Cart
+	}, {
+		path: '/user',
+		name: 'user',
+		component: User
+	}, {
+		path: '/search',
+		name: 'search',
+		component: Search
+	}, {
+		path: '/listli',
+		name: 'listli',
+		component: Listli
+	}, {
+		path: '/product',
+		name: 'product',
+		component: Product
+	}, {
+		path: '/router',
+		name: 'router',
+		component: Routerdemo
+	}, {
+		path: '/logo',
+		name: 'logo',
+		component: Logo
+	}, {
+		path: '/allbig',
+		name: 'allbig',
+		component: AllBig,
+		children: [{
+			path: '',
+			components: {
+				default: ConentMain,
+				header: AllHeader,
+				aside: AllAside,
+				conenttop: ConentTop,
+				conentright: ConentRight,
+			}
+		}]
+	}]
 });
 //router.beforeEach((to,from,next) =>{
 //	console.log(to);
@@ -84,4 +83,3 @@ const router= new Router({
 //	}
 //})
 export default router;
-	
