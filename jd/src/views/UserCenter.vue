@@ -9,6 +9,27 @@
 <script>
 	import Dibu from "@/components/Footer.vue";
 	export default {
+		data() {
+			return {
+
+			}
+		},
+		methods: {},
+		computed: {
+			login(){
+			return this.$store.state.user.login;
+			}
+		},
+		created() {
+			if(!this.login) {
+				this.$router.push({
+					path: '/login',
+					query: {
+						from:'/user',
+					}
+				})
+			}
+		},
 		components: {
 			Dibu
 		}

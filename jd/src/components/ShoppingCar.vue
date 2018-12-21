@@ -1,45 +1,49 @@
 <template>
-	<header class="fixed">
-		<p>京东购物车</p>
-		<a href="#" class="user">
-			<i class="fa fa-search"></i>
-		</a>
-	</header>
-	<ul>
-		<li class="list1 clear-float" v-for="(item,index) in goods">
-			<div class="left">
-				<div class="check-box" :class="{'selected':item.selected}" @click="select(index)"></div>
-			</div>
-			<ul class="right">
-				<li><img :src="item.image" /></li>
-				<li class="clear-float">
-					<p v-text="item.title"></p>
-					<div class="price">
-						￥:<span v-text="item.price"></span>
-					</div>
-					<div class="count">
-						<span @click="item.count=item.count>1?--item.count:item.count">-</span>
-						<span v-text="item.count">1</span>
-						<span @click="item.count++">+</span>
-					</div>
-				</li>
-			</ul>
-		</li>
-	</ul>
 
+	<div>
+
+		<header class="fixed">
+			<p>京东购物车</p>
+			<a href="#" class="user">
+				<i class="fa fa-search"></i>
+			</a>
+		</header>
+		<ul>
+			<li class="list1 clear-float" v-for="(item,index) in goods">
+				<div class="left">
+					<div class="check-box" :class="{'selected':item.selected}" @click="select(index)"></div>
+				</div>
+				<ul class="right">
+					<li><img :src="item.image" /></li>
+					<li class="clear-float">
+						<p v-text="item.title"></p>
+						<div class="price">
+							￥:<span v-text="item.price"></span>
+						</div>
+						<div class="count">
+							<span @click="item.count=item.count>1?--item.count:item.count">-</span>
+							<span v-text="item.count">1</span>
+							<span @click="item.count++">+</span>
+						</div>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		
+		<div class="dibu flex">
+			<div class="all" :class="{'selected':all}" @click="selectAll" style="margin: 0.1rem;display: inline-block;">
+				<div class="check-box" :class="{'selected':item.selected}" @click="select(index)"></div>
+				<span>全选</span>
+			</div>
+			<div class="money">
+				<span>合计：￥</span>
+				<span></span>
+			</div>
+			<div class="go">
+				去结算(<span></span>)
+			</div>
+		</div>
 	</div>
-	<div class="dibu flex">
-		<div class="all" :class="{'selected':all}" @click="selectAll" style="margin: 0.1rem;display: inline-block;">
-			<div class="check-box" :class="{'selected':item.selected}" @click="select(index)"></div>
-			<span>全选</span>
-		</div>
-		<div class="money">
-			<span>合计：￥</span>
-			<span></span>
-		</div>
-		<div class="go">
-			去结算(<span></span>)
-		</div>
 </template>
 <script>
 	export default {
@@ -50,20 +54,6 @@
 					id: 1,
 					title: '01-OPPO Find X手机【6期免息】双曲面全景屏 8G运存+128G/256G内存双卡双待全网通 波尔多红（标准版）8GB+128GB',
 					price: 4999,
-					count: 1,
-					image: 'img/phone.jpg',
-					selected: false,
-				}, {
-					id: 2,
-					title: '02-OPPO Find X手机【6期免息】双曲面全景屏 8G运存+128G/256G内存双卡双待全网通 波尔多红（标准版）8GB+128GB',
-					price: 5999,
-					count: 1,
-					image: 'img/phone.jpg',
-					selected: false,
-				}, {
-					id: 3,
-					title: '03-OPPO Find X手机【6期免息】双曲面全景屏 8G运存+128G/256G内存双卡双待全网通 波尔多红（标准版）8GB+128GB',
-					price: 6999,
 					count: 1,
 					image: 'img/phone.jpg',
 					selected: false,
@@ -117,6 +107,9 @@
 						this.selected = [];
 					}
 				},
+				created() {
+					console.log(this.login);
+				},
 				computed: {
 					total: function() {
 						var sum = 0;
@@ -132,9 +125,9 @@
 						}
 						return sum;
 					}
+					
 				}
 		}
-	}
 	}
 </script>
 <style scoped>
@@ -157,6 +150,14 @@
 		position: fixed;
 		top: 0px;
 		right: 15%;
+	}
+	
+	.shopping-cart-empty {
+		padding: 30px 0 15px;
+	}
+	
+	.shopping-cart-empty img {
+		width: 90px;
 	}
 	
 	.clear:after {

@@ -8,7 +8,7 @@ import Listli from './views/Listli.vue'
 import Product from './views/ProductList.vue'
 import Routerdemo from './views/Router.vue'
 import AllBig from './views/AllBig.vue'
-import Logo from './views/Logo.vue'
+import Login from './views/Login.vue'
 import Detail from './components/Detail.vue'
 import Comment from './components/Comment.vue'
 import Recommend from './components/Recommend.vue'
@@ -52,11 +52,11 @@ const router = new Router({
 		path: '/router',
 		name: 'router',
 		component: Routerdemo
-	}, {
-		path: '/logo',
-		name: 'logo',
-		component: Logo
-	}, {
+	},{
+		path: '/login',
+		name: 'login',
+		component: Login
+	},{
 		path: '/allbig',
 		name: 'allbig',
 		component: AllBig,
