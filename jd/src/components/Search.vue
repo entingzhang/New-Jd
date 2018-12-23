@@ -1,5 +1,5 @@
 <template>
-	<!--首页上面的搜索狂的组件-->
+	<!--首页上面的搜索框的组件-->
 	<div class="search-bar weui-flex" :class="{fixed:fixed}">
 		<div class="category">
 			<span class="fa fa-th-list"></span>
