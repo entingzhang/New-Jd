@@ -9,6 +9,7 @@ import Product from './views/ProductList.vue'
 import Routerdemo from './views/Router.vue'
 import AllBig from './views/AllBig.vue'
 import Login from './views/Login.vue'
+import ProductDetail from './views/ProductDetail.vue'
 import AllAside from './components/AllAside.vue'
 //import AllConent from './components/AllConent.vue'
 import AllHeader from './components/AllHeader.vue'
@@ -53,6 +54,10 @@ const router = new Router({
 		path: '/login',
 		name: 'login',
 		component: Login
+	},{
+		path: '/productdetail',
+		name: 'productdetail',
+		component: ProductDetail
 	},{
 		path: '/allbig',
 		name: 'allbig',
