@@ -5,7 +5,6 @@ import Cart from './views/ShoppingCart.vue'
 import User from './views/UserCenter.vue'
 import Search from './views/Search.vue'
 import Listli from './views/Listli.vue'
-import Product from './views/ProductList.vue'
 import Routerdemo from './views/Router.vue'
 import AllBig from './views/AllBig.vue'
 import Login from './views/Login.vue'
@@ -42,11 +41,7 @@ const router = new Router({
 		path: '/listli',
 		name: 'listli',
 		component: Listli
-	}, {
-		path: '/product',
-		name: 'product',
-		component: Product
-	}, {
+	},{
 		path: '/router',
 		name: 'router',
 		component: Routerdemo
