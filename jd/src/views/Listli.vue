@@ -13,15 +13,13 @@
 						<img :src="products.image">
 					</div>
 					<div class="category-jd" v-for="(row,i) in products.category">
-						<div class="title" v-text="row.title">
-							<ul class="clear">
-								<li class="product left" v-for="(col,j) in row.list">
-									<img :src="col.image" />
-									<div class="product-name" v-text="col.name"></div>
-								</li>
-							</ul>
-
-						</div>
+						<div class="title" v-text="row.title"></div>
+						<ul class="clear">
+							<li class="product left" v-for="(col,j) in row.list">
+								<img :src="col.image" />
+								<div class="product-name" v-text="col.name"></div>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -32,7 +30,6 @@
 
 <script>
 	import SearchBar from "@/components/Search.vue";
-	import ListNav from "@/components/ListNav.vue";
 	import Dibu from "@/components/Footer.vue";
 	export default {
 		data() {
@@ -158,7 +155,7 @@
 							name: '手机'
 						}]
 					}, {
-						title: '家电搜索',
+						title: '手机数码',
 						list: [{
 							image: '/images/1.jpg',
 							name: '热水壶'
@@ -188,7 +185,7 @@
 				}, {
 					image: '/images/listli-image2.jpg',
 					category: [{
-						title: '热门分类',
+						title: '国际名牌',
 						list: [{
 							image: '/images/2.jpg',
 							name: '计生用品'
@@ -233,7 +230,7 @@
 							name: '计生用品'
 						}]
 					}, {
-						title: '家电搜索',
+						title: '海囤全球',
 						list: [{
 							image: '/images/6.jpg',
 							name: '化妆品'
@@ -326,17 +323,16 @@
 			this.minTop = this.$refs['aside'].clientHeight - 150 - this.$refs['aside-ul'].clientHeight;
 
 			console.log(this.minTop);
-//			this.contentMinTop = this.$refs['content'].clientHeight - 150 - this.$refs['category-list'].clientHeight;
+			//			this.contentMinTop = this.$refs['content'].clientHeight - 150 - this.$refs['category-list'].clientHeight;
 		},
 		created() {
 			this.getContentList();
 		},
-		updated(){
+		updated() {
 			this.contentMinTop = this.$refs['content'].clientHeight - 150 - this.$refs['category-list'].clientHeight;
 		},
 		components: {
 			SearchBar,
-			ListNav,
 			Dibu
 		}
 	}
@@ -397,48 +393,58 @@
 	.category-page .container .aside ul li.active {
 		color: #F23030!important;
 	}
+	
 	.category-page .content {
 		overflow: hidden;
 		position: relative;
 	}
-	.category-list{
+	
+	.category-list {
 		width: 100%;
 		position: absolute;
 		top: 0px;
 		left: 0px;
 	}
-	.category-image{
+	
+	.category-image {
 		margin: 7px 7px 0px;
 		box-sizing: border-box;
 	}
-	.category-image img{
+	
+	.category-image img {
 		width: 100%;
 	}
-	.category-jd{
+	
+	.category-jd {
 		padding: 19px 7px 0px;
 		box-sizing: border-box;
 	}
-	.category-jd .title{
+	
+	.category-jd .title {
 		font-size: 14px;
 		font-weight: 700;
 		color: #333;
 		margin: 0;
 		padding: 0;
 	}
-	.category-jd ul{
+	
+	.category-jd ul {
 		margin: 9px 9px 0px;
 		padding: 0;
 	}
-	.category-jd ul li{
+	
+	.category-jd ul li {
 		width: 33.33%;
 		text-align: center;
 		list-style: none;
 	}
-	.category-jd ul li img{
+	
+	.category-jd ul li img {
 		width: 70px;
 		height: 70px;
 	}
-	.category-jd li .product-name{
+	
+	.category-jd li .product-name {
 		color: #333;
 		height: 35px;
 		margin-top: 2px;
