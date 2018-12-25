@@ -123,137 +123,137 @@
 					title: '玩具乐器'
 				}],
 				category: [{
-					image: require('../assets/images/xinrenlibao.png'),
+					image: '/images/listli-image.png',
 					category: [{
 						title: '热门分类',
 						list: [{
-							image: require('../assets/images/phone.png'),
+							image: '/images/phone.jpg',
 							name: '手机'
 						}, {
-							image: require('../assets/images/phone.png'),
+							image: '/images/phone.jpg',
 							name: '手机'
 						}, {
-							image: require('../assets/images/phone.png'),
+							image: '/images/phone.jpg',
 							name: '手机'
 						}, {
-							image: require('../assets/images/phone.png'),
+							image: '/images/phone.jpg',
 							name: '手机'
 						}, {
-							image: require('../assets/images/phone.png'),
+							image: '/images/phone.jpg',
 							name: '手机'
 						}, {
-							image: require('../assets/images/phone.png'),
+							image: '/images/phone.jpg',
 							name: '手机'
 						}, {
-							image: require('../assets/images/phone.png'),
+							image: '/images/phone.jpg',
 							name: '手机'
 						}, {
-							image: require('../assets/images/phone.png'),
+							image: '/images/phone.jpg',
 							name: '手机'
 						}, {
-							image: require('../assets/images/phone.png'),
+							image: '/images/phone.jpg',
 							name: '手机'
 						}, {
-							image: require('../assets/images/phone.png'),
+							image: '/images/phone.jpg',
 							name: '手机'
 						}]
 					}, {
 						title: '家电搜索',
 						list: [{
-							image: require('../assets/images/reshuihu.jpg'),
+							image: '/images/1.jpg',
 							name: '热水壶'
 						}, {
-							image: require('../assets/images/reshuihu.jpg'),
+							image: '/images/1.jpg',
 							name: '热水壶'
 						}, {
-							image: require('../assets/images/reshuihu.jpg'),
+							image: '/images/1.jpg',
 							name: '热水壶'
 						}, {
-							image: require('../assets/images/reshuihu.jpg'),
+							image: '/images/1.jpg',
 							name: '热水壶'
 						}, {
-							image: require('../assets/images/reshuihu.jpg'),
+							image: '/images/1.jpg',
 							name: '热水壶'
 						}, {
-							image: require('../assets/images/reshuihu.jpg'),
+							image: '/images/1.jpg',
 							name: '热水壶'
 						}, {
-							image: require('../assets/images/reshuihu.jpg'),
+							image: '/images/1.jpg',
 							name: '热水壶'
 						}, {
-							image: require('../assets/images/reshuihu.jpg'),
+							image: '/images/1.jpg',
 							name: '热水壶'
 						}]
 					}]
 				}, {
-					image: require('../assets/images/xinrenlibao.png'),
+					image: '/images/listli-image2.jpg',
 					category: [{
 						title: '热门分类',
 						list: [{
-							image: require('../assets/images/biyuntao.jpg'),
+							image: '/images/2.jpg',
 							name: '计生用品'
 						}, {
-							image: require('../assets/images/biyuntao.jpg'),
+							image: '/images/2.jpg',
 							name: '计生用品'
 						}, {
-							image: require('../assets/images/biyuntao.jpg'),
+							image: '/images/2.jpg',
 							name: '计生用品'
 						}, {
-							image: require('../assets/images/biyuntao.jpg'),
+							image: '/images/2.jpg',
 							name: '计生用品'
 						}, {
-							image: require('../assets/images/biyuntao.jpg'),
+							image: '/images/2.jpg',
 							name: '计生用品'
 						}, {
-							image: require('../assets/images/biyuntao.jpg'),
+							image: '/images/2.jpg',
 							name: '计生用品'
 						}, {
-							image: require('../assets/images/biyuntao.jpg'),
+							image: '/images/2.jpg',
 							name: '计生用品'
 						}, {
-							image: require('../assets/images/biyuntao.jpg'),
+							image: '/images/2.jpg',
 							name: '计生用品'
 						}, {
-							image: require('../assets/images/biyuntao.jpg'),
+							image: '/images/2.jpg',
 							name: '计生用品'
 						}, {
-							image: require('../assets/images/biyuntao.jpg'),
+							image: '/images/2.jpg',
 							name: '计生用品'
 						}, {
-							image: require('../assets/images/biyuntao.jpg'),
+							image: '/images/2.jpg',
 							name: '计生用品'
 						}, {
-							image: require('../assets/images/biyuntao.jpg'),
+							image: '/images/2.jpg',
 							name: '计生用品'
 						}, {
-							image: require('../assets/images/biyuntao.jpg'),
+							image: '/images/2.jpg',
 							name: '计生用品'
 						}, {
-							image: require('../assets/images/biyuntao.jpg'),
+							image: '/images/2.jpg',
 							name: '计生用品'
 						}]
 					}, {
 						title: '家电搜索',
 						list: [{
-							image: require('../assets/images/huahzuangpin.jpg'),
+							image: '/images/6.jpg',
 							name: '化妆品'
 						}, {
-							image: require('../assets/images/huahzuangpin.jpg'),
+							image: '/images/6.jpg',
 							name: '化妆品'
 						}, {
-							image: require('../assets/images/huahzuangpin.jpg'),
+							image: '/images/6.jpg',
 							name: '化妆品'
 						}, {
-							image: require('../assets/images/huahzuangpin.jpg'),
+							image: '/images/6.jpg',
 							name: '化妆品'
 						}, {
-							image: require('../assets/images/huahzuangpin.jpg'),
+							image: '/images/6.jpg',
 							name: '化妆品'
 						}, {
-							image: require('../assets/images/huahzuangpin.jpg'),
+							image: '/images/6.jpg',
 							name: '化妆品'
 						}, {
-							image: require('../assets/images/huahzuangpin.jpg'),
+							image: '/images/6.jpg',
 							name: '化妆品'
 						}]
 					}]
