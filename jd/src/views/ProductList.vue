@@ -15,13 +15,11 @@
 
 <script>
 	import TopBar from "@/components/TopBar.vue";
-	import Comment from "@/components/Comment.vue";
 	
 	export default{
 		name:'product',
 		components:{
 			TopBar,
-			Comment
 		}
 //		data(){
 //			return{
