@@ -43,7 +43,7 @@
 
 <style scoped="scoped">
 	.product-goods {
-		margin: 45px auto;
+		/*margin: 45px auto;*/
 	}
 	
 	.el-carousel__item h3 {
@@ -76,7 +76,7 @@
 		font-size: 16px;
 		color: #666;
 		text-align: center;
-		margin: 3px 2px;
+		margin: 2px 2px;
 	}
 	.title2 span {
 		color: #E4393C;
