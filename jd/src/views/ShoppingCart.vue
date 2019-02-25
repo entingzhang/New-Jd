@@ -1,12 +1,12 @@
 <template>
 	<div class="shopping-cart">
 		<top-bar>购物车</top-bar>
-		<div class="shopping-cart-empty" v-if="!login">
+		<div class="shopping-cart-empty" v-if="login">
 			<img src="../../public/images/nothing.png" />
 			<p>登录后可同步购物车商品</p>
 			<router-link :to="{path:'/login',query:{from:'/cart'}}" class="weui-btn weui-btn_plain-primary">登录</router-link>
 		</div>
-		<div class="shopping-list" v-if="login">
+		<div class="shopping-list" v-if="!login">
 			<div class="item weui-flex" v-for="(item,index) in products">
 				<div class="select">
 					<span class="check-box " :class="{checked:item.select}" @click="select(index)"></span>
